@@ -1,5 +1,9 @@
 /* GENERAL */
 
+:root {
+    --header-height: 25vh;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,14 +17,27 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 25vh;
+    height: var(--header-height);
     overflow: hidden;
 }
 
 .header-image {
     width: 100%;
+    object-fit: cover;
+    height: 100%;
+    /* top: 10000px; */
 }
 
 .header-title {
     position: absolute;
+    background-color: white;
+    padding: 1rem;
+    border-color: black;
+    border-style: solid;
+    border-radius: 0.25rem;
 }
+
+
+
+/* ------------------------------------------------------------------------- */
+/* QUIZ */
