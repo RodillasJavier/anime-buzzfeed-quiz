@@ -1,6 +1,13 @@
-# Title
+# Anime MC Buzzfeed style quiz
 
-*description*
+Buzzfeed-inspired quiz to find out what popular anime character somebody is based on their responses to the various questions. Animes include: 
+
+1. Dragon Ball  -> Goku
+2. JJK          -> Gojo
+3. One Piece    -> Luffy
+4. Demon Slayer -> Tanjiro
+5. Cowboy Bepop -> Spike
+6. AOT          -> Eren
 
 [deployed url](http://url-if-deployed-here)
 
