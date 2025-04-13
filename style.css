@@ -80,6 +80,22 @@ button {
     display: flex;
     flex-direction: column;
     margin: .5rem;
+    opacity: 1;
+    transition: all 0.25s ease-in-out;
+}
+
+.answer-choice:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.answer-choice.selected {
+    border: 0.25rem solid black;
+    opacity: 1;
+}
+
+.answer-choice.not-selected {
+    opacity: 0.5;
 }
 
 .answer-choice-image {

@@ -1,5 +1,6 @@
+/* SUBMIT BUTTON HANDLING */
 $('#get-results-button').on('click', function(e) {
-        // gather all checked radio-button values
+        // Store all checked radio-button values in an array
         var choices = $("input[type='radio']:checked").map(function(i, radio) {
             return $(radio).val();
         }).toArray();
@@ -8,6 +9,25 @@ $('#get-results-button').on('click', function(e) {
         console.log(choices[0]);
         document.getElementById('results-text').textContent = result;
 });
+
+
+
+/* STATE HANDLING FOR ANSWER CHOICES */
+$(document).ready(function() {
+    $("input[type='radio']").change(function() {
+        // Remove all states
+        $('.answer-choice').removeClass('selected not-selected');
+
+        // Add 'selected' state to chosen answer
+        $("input[type='radio']:checked").closest('.answer-choice').addClass('selected');
+
+        // Add 'not-selected' state to everything else
+        $('.answer-choice').not('.selected').addClass('not-selected');
+
+    });
+});
+
+
 
 /* MODAL HANDLING */
 

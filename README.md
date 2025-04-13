@@ -20,16 +20,18 @@ Buzzfeed-inspired quiz to find out what popular anime character somebody is base
 
 ## Design Spec (From Assignment Page)
 
+*Note:* ~~strikethrough~~ indicates completion.
+
 * **Questions:**
     * Display Several (3 or more) questions
-    * Header image & some text
-    * Have multiple potential answers  
+    * ~~Header image & some text~~
+    * ~~Have multiple potential answers~~
 
 * **Question Answers:**
     * Be either (1) text or (2) image or (3) both
         * Text answers are clickable text boxes (not images or buttons)
         
-    * 4 Potential display states
+    * ~~4 Potential display states~~
         * initial none selected
         * `:hover`
         * clicked/selected
