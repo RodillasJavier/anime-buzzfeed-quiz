@@ -24,25 +24,25 @@
 
                     <label class="answer-choice">
                         <img src="media/coffee.png" class="answer-choice-image">
-                        <input type="radio" name="favorite_beverage" value="coffee">
+                        <input type="radio" name="favorite_beverage" value="Coffee">
                         <p class="label">Coffee</p>
                     </label>
                     
                     <label class="answer-choice">
                         <img src="media/tea.png" class="answer-choice-image">
-                        <input type="radio" name="favorite_beverage" value="tea">
+                        <input type="radio" name="favorite_beverage" value="Tea">
                         <p class="label">Tea</p>
                     </label>
 
                     <label class="answer-choice">
                         <img src="media/mate.png" class="answer-choice-image">
-                        <input type="radio" name="favorite_beverage" value="mate">
+                        <input type="radio" name="favorite_beverage" value="Mate">
                         <p class="label">Mate</p>
                     </label>
 
                     <label class="answer-choice">
                         <img src="media/water.png" class="answer-choice-image">
-                        <input type="radio" name="favorite_beverage" value="water">
+                        <input type="radio" name="favorite_beverage" value="Water">
                         <p class="label">Water</p>
                     </label>
 
@@ -53,14 +53,23 @@
         </section>
 
         <section id="results">
-            <button id="get-results">Done!</button>
+
+            <button id="get-results-button">Done!</button>
 
             <div id="result-modal" class="modal">
-                <span class="close">&times;</span>
-                <p>Result</p>
+                <div class="modal-content">
+                    <p id="results-text">Results!</p>
+                    <span class="close">&times;</span>
+                </div>
             </div>
+
         </section>
 
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+        </script>
         <script src="main.js"></script>
     </body>
 
