@@ -7,7 +7,6 @@ Buzzfeed-inspired quiz to find out what popular anime character somebody is base
 3. One Piece    -> Luffy
 4. Demon Slayer -> Tanjiro
 5. Cowboy Bepop -> Spike
-6. AOT          -> Eren
 
 [deployed url](http://url-if-deployed-here)
 
