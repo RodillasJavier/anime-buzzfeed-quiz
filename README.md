@@ -1,4 +1,4 @@
-# Anime MC Buzzfeed style quiz
+# Anime Character Buzzfeed style quiz
 
 Buzzfeed-inspired quiz to find out what popular anime character somebody is based on their responses to the various questions. Animes include: 
 
