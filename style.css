@@ -19,7 +19,8 @@ body {
 
 button {
     font-family: "Nunito", sans-serif;
-    background-color: var(--weird-yellow);
+    background-color: white;
+    padding: 0.5rem 2.5rem;
 }
 
 
@@ -47,7 +48,8 @@ button {
     border-color: black;
     border-style: solid;
     border-radius: 0.25rem;
-    font-size: 2.5rem;
+    font-weight: 900;
+    font-size: 4rem;
 }
 
 
@@ -56,6 +58,7 @@ button {
 /* QUIZ */
 #quiz {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -65,7 +68,8 @@ button {
 }
 
 .question-title {
-    text-align: center;
+    text-align: right;
+    font-size: 3rem;
     padding: 2.5rem;
 }
 
@@ -73,15 +77,19 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: var(--weird-yellow);
 }
 
 .answer-choice {
     display: flex;
     flex-direction: column;
+    justify-content: end;
     margin: .5rem;
+    width: 20vw;
+    height: 20vw;
     opacity: 1;
     transition: all 0.25s ease-in-out;
+    border: 0.1rem solid black;
+    border-radius: 0.1rem;
 }
 
 .answer-choice:hover {
@@ -90,25 +98,29 @@ button {
 }
 
 .answer-choice.selected {
-    border: 0.25rem solid black;
     opacity: 1;
+    border: 0.5rem solid black;
+    border-radius: 0.5rem;
 }
 
 .answer-choice.not-selected {
     opacity: 0.5;
 }
 
-.answer-choice-image {
-    object-fit: scale-down;
-    width: 25rem;
-    height: 25rem;
+.answer-label {
+    position: absolute;
+    margin: .25rem;
+    padding: 0.25rem;
+    border: 0.1rem solid black;
+    background-color: white;
+    font-size: 1.25vw;
+    font-weight: 600;
 }
 
-.answer-choice .label {
+.answer-choice.text {
+    justify-content: center;
     text-align: center;
-    margin-top: .5rem;
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 3vw;
 }
 
 input[type=radio] {
@@ -126,7 +138,7 @@ input[type=radio] {
 }
 
 #get-results-button {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 #get-results-button:hover {

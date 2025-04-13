@@ -23,7 +23,6 @@ $(document).ready(function() {
 
         // Add 'not-selected' state to everything else
         $('.answer-choice').not('.selected').addClass('not-selected');
-
     });
 });
 

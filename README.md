@@ -6,7 +6,8 @@ Buzzfeed-inspired quiz to find out what popular anime character somebody is base
 2. JJK          -> Gojo
 3. One Piece    -> Luffy
 4. Demon Slayer -> Tanjiro
-5. Cowboy Bepop -> Spike
+5. Berserk      -> Guts
+6. Cowboy Bepop -> Spike
 
 [deployed url](http://url-if-deployed-here)
 
@@ -23,7 +24,7 @@ Buzzfeed-inspired quiz to find out what popular anime character somebody is base
 *Note:* ~~strikethrough~~ indicates completion.
 
 * **Questions:**
-    * Display Several (3 or more) questions
+    * ~~Display Several (3 or more) questions~~
     * ~~Header image & some text~~
     * ~~Have multiple potential answers~~
 
