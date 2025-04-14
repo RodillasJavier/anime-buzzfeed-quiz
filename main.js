@@ -1,13 +1,22 @@
 /* SUBMIT BUTTON HANDLING */
 $('#get-results-button').on('click', function(e) {
-        // Store all checked radio-button values in an array
-        var choices = $("input[type='radio']:checked").map(function(i, radio) {
-            return $(radio).val();
-        }).toArray();
+    // Store the total number of questions
+    const totalQuestions = $('.question-container').length;
 
-        var result = choices;
-        console.log(choices[0]);
-        document.getElementById('results-text').textContent = result;
+    // Store all checked radio-button values in an array
+    var choices = $("input[type='radio']:checked").map(function(i, radio) {
+        return $(radio).val();
+    }).toArray();
+
+    // Validate completion of all questions
+    if (choices.length < totalQuestions) {
+        var result = "Please answer all questions first before clicking 'Done'!";
+    } else {
+        var result = 0;
+    }
+
+    // Display our results
+    $('#results-text').text(result);
 });
 
 
