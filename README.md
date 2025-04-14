@@ -38,10 +38,10 @@ Buzzfeed-inspired quiz to find out what popular anime character somebody is base
         * clicked/selected
         * not selected (different from non selected state)
 
-* **Done Button:**
+* **~~Done Button:~~**
     * Calculate quiz output/results
 
-* **Output Display:**
+* **~~Output Display:~~**
     * Text & image
     * Don't show unless calculations are finished
     * Display error if no all questions are answered

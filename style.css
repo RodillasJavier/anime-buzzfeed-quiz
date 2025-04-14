@@ -151,25 +151,41 @@ input[type=radio] {
 
 .modal {
     display: none;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0, 0.5); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: #fefefe;
+    background-color: white;
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    padding: 1rem;
     border: 1px solid #888;
     width: 75%;
+    text-align: center;
+}
+
+#results-header {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#character {
+    padding: none;
+    text-decoration: underline;
+}
+
+#results-text {
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 .close {
@@ -177,6 +193,7 @@ input[type=radio] {
     float: right;
     font-size: 3rem;
     font-weight: 600;
+    padding-left: 1rem;
 }
 
 .close:hover,
