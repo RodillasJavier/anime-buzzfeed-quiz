@@ -1,34 +1,35 @@
 {
     "title": "What Anime Character are you?",
+    "headerImage": "media/gutsbg.png", 
 
     "outcomes": {
             "1": {
-                "name": "Goku",
+                "question_name": "Goku",
                 "image": "media/characters/goku.png", 
                 "description": "You are pure-hearted and always looking for the next challenge!"
             },
             "2": {
-                "name": "Gojo",
+                "question_name": "Gojo",
                 "image": "media/characters/gojo.png", 
                 "description": "Confident and capable, you know your worth!"
             },
             "3": {
-                "name": "Luffy",
+                "question_name": "Luffy",
                 "image": "media/characters/luffy.png", 
                 "description": "Adventure calls to you, and you never back down!"
             },
             "4": {
-                "name": "Tanjiro",
+                "question_name": "Tanjiro",
                 "image": "media/characters/tanjiro.png", 
                 "description": "Kind and determined, you never give up!"
             },
             "5": {
-                "name": "Guts",
+                "question_name": "Guts",
                 "image": "media/characters/guts.png", 
                 "description": "You persevere through any challenge life throws at you!"
             },
             "6": {
-                "name": "Spike",
+                "question_name": "Spike",
                 "image": "media/characters/spike.png", 
                 "description": "Cool and collected, you take life as it comes!"
             }
@@ -86,37 +87,37 @@
                 {
                     "id": "favorite_meal_1",
                     "text": "All you can eat buffet",
-                    "img_url": "none",
+                    "img_url": "",
                     "outcome": "1"
                 }, 
                 {
                     "id": "favorite_meal_2",
                     "text": "Sushi and some sake",
-                    "img_url": "none",
+                    "img_url": "",
                     "outcome": "2"
                 }, 
                 {
                     "id": "favorite_meal_3",
                     "text": "Something homemade",
-                    "img_url": "none",
+                    "img_url": "",
                     "outcome": "3"
                 }, 
                 {
                     "id": "favorite_meal_4",
                     "text": "A big steak dinner",
-                    "img_url": "none",
+                    "img_url": "",
                     "outcome": "4"
                 }, 
                 {
                     "id": "favorite_meal_5",
                     "text": "I don't care, I'm not picky",
-                    "img_url": "none",
+                    "img_url": "",
                     "outcome": "5"
                 }, 
                 {
                     "id": "favorite_meal_6",
                     "text": "Microwave meals 100%",
-                    "img_url": "none",
+                    "img_url": "",
                     "outcome": "6"
                 } 
             ]
@@ -172,37 +173,37 @@
                 {
                     "id": "motivation_1",
                     "text": "Testing my own limits",
-                    "img_url": "none",
+                    "img_url": "",
                     "outcome": "1"
                 }, 
                 {
                     "id": "motivation_2",
                     "text": "Making the world a better place",
-                    "img_url": "none",
+                    "img_url": "",
                     "outcome": "2"
                 }, 
                 {
                     "id": "motivation_3",
                     "text": "Helping family + friends",
-                    "img_url": "none",
+                    "img_url": "",
                     "outcome": "3"
                 }, 
                 {
                     "id": "motivation_4",
                     "text": "Having fun and being free",
-                    "img_url": "none",
+                    "img_url": "",
                     "outcome": "4"
                 }, 
                 {
                     "id": "motivation_5",
                     "text": "Finding my own purpose",
-                    "img_url": "none",
+                    "img_url": "",
                     "outcome": "5"
                 }, 
                 {
                     "id": "motivation_6",
                     "text": "Going on new adventures",
-                    "img_url": "none",
+                    "img_url": "",
                     "outcome": "6"
                 } 
             ]
@@ -221,31 +222,31 @@
                 {
                     "id": "day_off_2",
                     "text": "Eat with friends",
-                    "img_url": "eat",
+                    "img_url": "media/q5/eat.png",
                     "outcome": "2"
                 }, 
                 {
                     "id": "day_off_3",
                     "text": "Take a hike!",
-                    "img_url": "hike",
+                    "img_url": "media/q5/hike.png",
                     "outcome": "3"
                 }, 
                 {
                     "id": "day_off_4",
                     "text": "See new places",
-                    "img_url": "wander",
+                    "img_url": "media/q5/wander.png",
                     "outcome": "4"
                 }, 
                 {
                     "id": "day_off_5",
                     "text": "Meditation + relaxation",
-                    "img_url": "meditate",
+                    "img_url": "media/q5/meditate.png",
                     "outcome": "5"
                 }, 
                 {
                     "id": "day_off_6",
                     "text": "Sleep all day",
-                    "img_url": "sleep",
+                    "img_url": "media/q5/sleep.png",
                     "outcome": "6"
                 } 
             ]
