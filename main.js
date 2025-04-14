@@ -5,7 +5,7 @@ $('#get-results-button').on('click', function(e) {
             return $(radio).val();
         }).toArray();
 
-        var result = choices[0];
+        var result = choices;
         console.log(choices[0]);
         document.getElementById('results-text').textContent = result;
 });
@@ -15,14 +15,16 @@ $('#get-results-button').on('click', function(e) {
 /* STATE HANDLING FOR ANSWER CHOICES */
 $(document).ready(function() {
     $("input[type='radio']").change(function() {
+        const $question = $(this).closest('.question-container');
+
         // Remove all states
-        $('.answer-choice').removeClass('selected not-selected');
+        $question.find('.answer-choice').removeClass('selected not-selected');
 
         // Add 'selected' state to chosen answer
-        $("input[type='radio']:checked").closest('.answer-choice').addClass('selected');
+        $(this).closest('.answer-choice').addClass('selected');
 
         // Add 'not-selected' state to everything else
-        $('.answer-choice').not('.selected').addClass('not-selected');
+        $question.find('.answer-choice').not('.selected').addClass('not-selected');
     });
 });
 

@@ -4,7 +4,6 @@
 
 :root {
     --header-height: 25vh;
-    --weird-yellow: rgba(250,243,215,255);
 }
 
 * {
@@ -64,11 +63,14 @@ button {
 }
 
 .question-container {
+    display: flex;
+    flex-direction: column;
     width: 75%;
+    padding-bottom: 5vh;
 }
 
 .question-title {
-    text-align: right;
+    text-align: center;
     font-size: 3rem;
     padding: 2.5rem;
 }
@@ -143,7 +145,7 @@ input[type=radio] {
 
 #get-results-button:hover {
     cursor: pointer;
-    color: var(--weird-yellow);
+    color: white;
     background-color: darkslategray;
 }
 
