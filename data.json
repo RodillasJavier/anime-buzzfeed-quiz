@@ -2,34 +2,34 @@
     "title": "What Anime Character are you?",
     "headerImage": "media/gutsbg.png", 
 
-    "outcomes": {
+    "characters": {
             "1": {
-                "question_name": "Goku",
+                "name": "Goku",
                 "image": "media/characters/goku.png", 
                 "description": "You are pure-hearted and always looking for the next challenge!"
             },
             "2": {
-                "question_name": "Gojo",
+                "name": "Gojo",
                 "image": "media/characters/gojo.png", 
                 "description": "Confident and capable, you know your worth!"
             },
             "3": {
-                "question_name": "Luffy",
+                "name": "Luffy",
                 "image": "media/characters/luffy.png", 
                 "description": "Adventure calls to you, and you never back down!"
             },
             "4": {
-                "question_name": "Tanjiro",
+                "name": "Tanjiro",
                 "image": "media/characters/tanjiro.png", 
                 "description": "Kind and determined, you never give up!"
             },
             "5": {
-                "question_name": "Guts",
+                "name": "Guts",
                 "image": "media/characters/guts.png", 
                 "description": "You persevere through any challenge life throws at you!"
             },
             "6": {
-                "question_name": "Spike",
+                "name": "Spike",
                 "image": "media/characters/spike.png", 
                 "description": "Cool and collected, you take life as it comes!"
             }

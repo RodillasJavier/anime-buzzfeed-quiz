@@ -83,8 +83,9 @@ function initializeQuizHandlers() {
         }
         
         // Get and display our results
-        const results = calculateResults(choices);
-        displayResults(results);
+        calculateResults(choices, function(result) {
+            displayResults(result);
+        });
     });
 }
 
@@ -110,74 +111,39 @@ function displayResults(results) {
 
 /* ------------------------------------------------------------------------- */
 /* CALCULATING RESULTS */
-function calculateResults(choices) {
-    // Mapping answers to characters
-    const characters = {
-        '1': { 
-            name: 'Goku', 
-            count: 0, 
-            image: 'media/characters/goku.png', 
-            description: 'You are pure-hearted and always looking for the next challenge!' 
-        },
-
-        '2': { 
-            name: 'Gojo', 
-            count: 0, 
-            image: 'media/characters/gojo.png', 
-            description: 'Confident and capable, you know your worth!' 
-        },
-
-        '3': { 
-            name: 'Luffy', 
-            count: 0, 
-            image: 'media/characters/luffy.png', 
-            description: 'Adventure calls to you, and you never back down!' 
-        },
-
-        '4': { 
-            name: 'Tanjiro', 
-            count: 0, 
-            image: 'media/characters/tanjiro.png', 
-            description: 'Kind and determined, you never give up!' 
-        },
-        
-        '5': { 
-            name: 'Guts', 
-            count: 0, 
-            image: 'media/characters/guts.png', 
-            description: 'You persevere through any challenge life throws at you!' 
-        },
-        
-        '6': { 
-            name: 'Spike', 
-            count: 0, 
-            image: 'media/characters/spike.png', 
-            description: 'Cool and collected, you take life as it comes!' 
+function calculateResults(choices, callback) {
+    $.getJSON("data.json", function(data) {
+        const characters = data.characters;
+    
+        // Initialize counts
+        for (const key in characters) {
+            characters[key].count = 0;
         }
-    }
 
-    // Count how many times each characters' corresponding response is chosen
-    choices.forEach(choice => {
-        if (characters[choice]) {
-            characters[choice].count++;
+        // Count how many times each characters' corresponding response is chosen
+        choices.forEach(choice => {
+            if (characters[choice]) {
+                characters[choice].count++;
+            }
+        });
+
+        // Find character with highest count
+        let maxCount = 0;
+        let result = null;
+
+        for (const [character, data] of Object.entries(characters)) {
+            if (data.count > maxCount) {
+                maxCount = data.count;
+                result = {
+                    character: data.name,
+                    image: data.image,
+                    description: data.description
+                };
+            }
         }
+
+        callback(result);
     });
-
-    // Return the character with the most matches of responses
-    let maxCount = 0;
-    let result = null;
-    for (const [character, data] of Object.entries(characters)) {
-        if (data.count > maxCount) {
-            maxCount = data.count;
-            result = {
-                character: data.name, 
-                image: data.image, 
-                description: data.description
-            };
-        }
-    }
-
-    return result;
 }
 
 
