@@ -9,15 +9,28 @@ Buzzfeed-inspired quiz to find out what popular anime character somebody is base
 5. Berserk      -> Guts
 6. Cowboy Bepop -> Spike
 
-[deployed url](http://url-if-deployed-here)
+[deployed url](https://lab2-quiz-platform-rodillasjavier.onrender.com/)
 
 ## What Worked Well
 
+Designing the page itself this time around went a lot more smoothly and quickly than with the lnading page. I already felt as though I was infinitely more comfortable with flex boxes and could pretty confidently know how to solve any layout issues I had. Also, sifting through the W3 documentation was very useful as I've never used JQuery before. 
+
 ## What Didn't
+
+I had a really hard time making the generalized framework. I think that on the landing page, my mistakes in my html were exposed when I started CSS. This time I learned from my structuring mistakes because styling was super easy, since I knew more how to structure my page. This time around, however, in a way that is analogous to what happened in lab1, once I tried generalizing the framework for quizzes, I quickly realized the flaws in the way I structure my HTML and frequently had to go back and add or take away identifiers and classes. 
 
 ## Extra Credit
 
+None applied
+
 ## Screenshots
+
+![alt text](lab2_ss1.png)
+![alt text](lab2_ss2.png) 
+![alt text](lab2_ss3.png) 
+![alt text](lab2_ss4.png) 
+![alt text](lab2_ss5.png) 
+![alt text](lab2_ss6.png)
 
 ## Design Spec (From Assignment Page)
 
