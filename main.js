@@ -1,20 +1,95 @@
-/* SUBMIT BUTTON HANDLING */
-$('#get-results-button').on('click', function(e) {
-    // Store the total number of questions
-    const totalQuestions = $('.question-container').length;
+/* LOADING IN QUESTIONS VIA JSON */
+$.getJSON("data.json", function(data) {
+    // Generate header
+    const headerHTML = `
+        <img class="header-image" src="${data.headerImage}" alt="Guts Resting">
+        <h1 class="header-title">${data.title}</h1>
+    `;
+    $("#header").append(headerHTML);
 
-    // Store all checked radio-button values in an array
-    var choices = $("input[type='radio']:checked").map(function(i, radio) {
-        return $(radio).val();
-    }).toArray();
+    // Generate questions
+    const quizHTML = data.questions.map(function (question) {
+        const answersHTML = question.answers.map(function(answer) {
+            return `
+                <label class="answer-choice ${question.question_type}">
+                    <img src="${answer.img_url}" class="answer-choice-image">
+                    <input type="radio" name="${question.question_name}" value="${answer.outcome}">
 
-    // Validate completion of all questions
-    if (choices.length < totalQuestions) {
-        $('#results-text').text("Please answer all questions first before clicking 'Done'!");
-    }
+                    ${question.question_type === 'image_text' ? 
+                        // If it is image_text, add a label
+                        `<p class="answer-label">${answer.text}</p>` :
 
-    // Get and display our results
-    const results = calculateResults(choices);
+                        // If it is just text, classify it as THE choice
+                        question.question_type === 'text' ? 
+                        `<p class="answer-choice-text">${answer.text}</p>` : 
+
+                        // If it is just an image, don't add any text to the answer
+                        question.question_type === 'image' ? '' : ''
+                    }
+                </label>
+            `;
+        }).join('');
+    
+        return `
+            <div class="question-container">
+                <h2 class="question-title">${question.question_prompt}</h2>
+                <div class="answer-choice-container">
+                    ${answersHTML}
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    // Sub in our html
+    $("#quiz").html(quizHTML);
+
+    // Do quiz handling
+    initializeQuizHandlers();
+});
+
+
+
+/* ------------------------------------------------------------------------- */
+/* QUIZ HANDLING */
+function initializeQuizHandlers() {
+    // Answer choice state handling
+    $("input[type='radio']").change(function() {
+        const $question = $(this).closest('.question-container');
+        
+        // Remove all states
+        $question.find('.answer-choice').removeClass('selected not-selected');
+        
+        // Add 'selected' state to chosen answer
+        $(this).closest('.answer-choice').addClass('selected');
+        
+        // Add 'not-selected' state to everything else
+        $question.find('.answer-choice').not('.selected').addClass('not-selected');
+    });
+
+    // Results button handling
+    $('#get-results-button').on('click', function() {
+        // Store the total number of questions
+        const totalQuestions = $('.question-container').length;
+
+        // Store all checked radio-button values in an array
+        const choices = $("input[type='radio']:checked").map(function(i, radio) {
+            return $(radio).val();
+        }).toArray();
+        
+        // Validate completion of all questions
+        if (choices.length < totalQuestions) {
+            $('#results-text').text("Please answer all questions first before clicking 'Done'!");
+            return;
+        }
+        
+        // Get and display our results
+        const results = calculateResults(choices);
+        displayResults(results);
+    });
+}
+
+// Helper to display results when the submit button is pressed
+function displayResults(results) {
     const resultsHTML = `
         <div class="modal-content">
             <h2 id="results-header">You are <u>${results.character}</u>!</h2>
@@ -25,10 +100,15 @@ $('#get-results-button').on('click', function(e) {
     `;
 
     $('#result-modal').html(resultsHTML);
-});
+
+    $('.close').on('click', function() {
+        $('#result-modal').css('display', 'none');
+    });
+}
 
 
 
+/* ------------------------------------------------------------------------- */
 /* CALCULATING RESULTS */
 function calculateResults(choices) {
     // Mapping answers to characters
@@ -101,30 +181,13 @@ function calculateResults(choices) {
 }
 
 
-/* STATE HANDLING FOR ANSWER CHOICES */
-$(document).ready(function() {
-    $("input[type='radio']").change(function() {
-        const $question = $(this).closest('.question-container');
 
-        // Remove all states
-        $question.find('.answer-choice').removeClass('selected not-selected');
-
-        // Add 'selected' state to chosen answer
-        $(this).closest('.answer-choice').addClass('selected');
-
-        // Add 'not-selected' state to everything else
-        $question.find('.answer-choice').not('.selected').addClass('not-selected');
-    });
-});
-
-
-
+/* ------------------------------------------------------------------------- */
 /* MODAL HANDLING */
 
 // Get out modal, button and span (close button for modal)
 var modal = document.getElementById('result-modal');
 var button = document.getElementById('get-results-button');
-var span = document.getElementsByClassName('close')[0];
 
 // Opening the modal
 button.onclick = function() {
@@ -132,9 +195,9 @@ button.onclick = function() {
 }
 
 // Closing the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+$('.close').on('click', function() {
+    $('#result-modal').css('display', 'none');
+});
 
 window.onclick = function(event) {
     if (event.target == modal) {

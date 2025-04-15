@@ -1,0 +1,297 @@
+{
+    "title": "What Anime Character are you?",
+    "headerImage": "media/gutsbg.png", 
+
+    "outcomes": {
+            "1": {
+                "question_name": "Goku",
+                "image": "media/characters/goku.png", 
+                "description": "You are pure-hearted and always looking for the next challenge!"
+            },
+            "2": {
+                "question_name": "Gojo",
+                "image": "media/characters/gojo.png", 
+                "description": "Confident and capable, you know your worth!"
+            },
+            "3": {
+                "question_name": "Luffy",
+                "image": "media/characters/luffy.png", 
+                "description": "Adventure calls to you, and you never back down!"
+            },
+            "4": {
+                "question_name": "Tanjiro",
+                "image": "media/characters/tanjiro.png", 
+                "description": "Kind and determined, you never give up!"
+            },
+            "5": {
+                "question_name": "Guts",
+                "image": "media/characters/guts.png", 
+                "description": "You persevere through any challenge life throws at you!"
+            },
+            "6": {
+                "question_name": "Spike",
+                "image": "media/characters/spike.png", 
+                "description": "Cool and collected, you take life as it comes!"
+            }
+    },
+
+    "questions": [
+        {
+            "question_name": "favorite_beverage",
+            "question_prompt": "What is your go-to beverage?",
+            "question_type": "image_text", 
+            "answers": [
+                {
+                    "id": "favorite_beverage_1",
+                    "text": "Protein Shake",
+                    "img_url": "media/q1/protein.png",
+                    "outcome": "1"
+                }, 
+                {
+                    "id": "favorite_beverage_2",
+                    "text": "Boba Tea",
+                    "img_url": "media/q1/boba.png",
+                    "outcome": "2"
+                }, 
+                {
+                    "id": "favorite_beverage_3",
+                    "text": "Tea",
+                    "img_url": "media/q1/tea.png",
+                    "outcome": "3"
+                }, 
+                {
+                    "id": "favorite_beverage_4",
+                    "text": "Soda",
+                    "img_url": "media/q1/soda.png",
+                    "outcome": "4"
+                }, 
+                {
+                    "id": "favorite_beverage_5",
+                    "text": "Black Coffee",
+                    "img_url": "media/q1/coffee.png",
+                    "outcome": "5"
+                }, 
+                {
+                    "id": "favorite_beverage_6",
+                    "text": "Water",
+                    "img_url": "media/q1/water.png",
+                    "outcome": "6"
+                }
+            ]
+        }, 
+        {
+            "question_name": "favorite_meal",
+            "question_prompt": "What's your favorite type of meal after a long day?",
+            "question_type": "text", 
+            "answers": [
+                {
+                    "id": "favorite_meal_1",
+                    "text": "All you can eat buffet",
+                    "img_url": "",
+                    "outcome": "1"
+                }, 
+                {
+                    "id": "favorite_meal_2",
+                    "text": "Sushi and some sake",
+                    "img_url": "",
+                    "outcome": "2"
+                }, 
+                {
+                    "id": "favorite_meal_3",
+                    "text": "Something homemade",
+                    "img_url": "",
+                    "outcome": "3"
+                }, 
+                {
+                    "id": "favorite_meal_4",
+                    "text": "A big steak dinner",
+                    "img_url": "",
+                    "outcome": "4"
+                }, 
+                {
+                    "id": "favorite_meal_5",
+                    "text": "I don't care, I'm not picky",
+                    "img_url": "",
+                    "outcome": "5"
+                }, 
+                {
+                    "id": "favorite_meal_6",
+                    "text": "Microwave meals 100%",
+                    "img_url": "",
+                    "outcome": "6"
+                } 
+            ]
+        }, 
+        {
+            "question_name": "superpower",
+            "question_prompt": "If you could have one power, which would it be?",
+            "question_type": "image_text", 
+            "answers": [
+                {
+                    "id": "superpower_1",
+                    "text": "Inhuman Strength",
+                    "img_url": "media/q3/strength.png",
+                    "outcome": "1"
+                }, 
+                {
+                    "id": "superpower_2",
+                    "text": "Enhanced Senses",
+                    "img_url": "media/q3/senses.png",
+                    "outcome": "2"
+                }, 
+                {
+                    "id": "superpower_3",
+                    "text": "Wield any weapon",
+                    "img_url": "media/q3/weapon.png",
+                    "outcome": "3"
+                }, 
+                {
+                    "id": "superpower_4",
+                    "text": "Super Speed",
+                    "img_url": "media/q3/speed.png",
+                    "outcome": "4"
+                }, 
+                {
+                    "id": "superpower_5",
+                    "text": "Accelerated Recovery",
+                    "img_url": "media/q3/recovery.png",
+                    "outcome": "5"
+                }, 
+                {
+                    "id": "superpower_6",
+                    "text": "Use any martial art",
+                    "img_url": "media/q3/mma.png",
+                    "outcome": "6"
+                } 
+            ]
+        }, 
+        {
+            "question_name": "motivation",
+            "question_prompt": "What motivates you the most?",
+            "question_type": "text", 
+            "answers": [
+                {
+                    "id": "motivation_1",
+                    "text": "Testing my own limits",
+                    "img_url": "",
+                    "outcome": "1"
+                }, 
+                {
+                    "id": "motivation_2",
+                    "text": "Making the world a better place",
+                    "img_url": "",
+                    "outcome": "2"
+                }, 
+                {
+                    "id": "motivation_3",
+                    "text": "Helping family + friends",
+                    "img_url": "",
+                    "outcome": "3"
+                }, 
+                {
+                    "id": "motivation_4",
+                    "text": "Having fun and being free",
+                    "img_url": "",
+                    "outcome": "4"
+                }, 
+                {
+                    "id": "motivation_5",
+                    "text": "Finding my own purpose",
+                    "img_url": "",
+                    "outcome": "5"
+                }, 
+                {
+                    "id": "motivation_6",
+                    "text": "Going on new adventures",
+                    "img_url": "",
+                    "outcome": "6"
+                } 
+            ]
+        }, 
+        {
+            "question_name": "day_off",
+            "question_prompt": "What is your favorite way to spend a day off?",
+            "question_type": "image_text", 
+            "answers": [
+                {
+                    "id": "day_off_1",
+                    "text": "Work out",
+                    "img_url": "media/q5/workout.png",
+                    "outcome": "1"
+                }, 
+                {
+                    "id": "day_off_2",
+                    "text": "Eat with friends",
+                    "img_url": "media/q5/eat.png",
+                    "outcome": "2"
+                }, 
+                {
+                    "id": "day_off_3",
+                    "text": "Take a hike!",
+                    "img_url": "media/q5/hike.png",
+                    "outcome": "3"
+                }, 
+                {
+                    "id": "day_off_4",
+                    "text": "See new places",
+                    "img_url": "media/q5/wander.png",
+                    "outcome": "4"
+                }, 
+                {
+                    "id": "day_off_5",
+                    "text": "Meditation + relaxation",
+                    "img_url": "media/q5/meditate.png",
+                    "outcome": "5"
+                }, 
+                {
+                    "id": "day_off_6",
+                    "text": "Sleep all day",
+                    "img_url": "media/q5/sleep.png",
+                    "outcome": "6"
+                } 
+            ]
+        }, 
+        {
+            "question_name": "nap",
+            "question_prompt": "Where are you napping the hardest?",
+            "question_type": "image", 
+            "answers": [
+                {
+                    "id": "nap_1",
+                    "text": "none",
+                    "img_url": "media/q6/green.png",
+                    "outcome": "1"
+                }, 
+                {
+                    "id": "nap_2",
+                    "text": "none",
+                    "img_url": "media/q6/tower_room.png",
+                    "outcome": "2"
+                }, 
+                {
+                    "id": "nap_3",
+                    "text": "none",
+                    "img_url": "media/q6/hammock.png",
+                    "outcome": "3"
+                }, 
+                {
+                    "id": "nap_4",
+                    "text": "none",
+                    "img_url": "media/q6/nature_bed.png",
+                    "outcome": "4"
+                }, 
+                {
+                    "id": "nap_5",
+                    "text": "none",
+                    "img_url": "media/q6/dark_bed.png",
+                    "outcome": "5"
+                }, 
+                {
+                    "id": "nap_6",
+                    "text": "none",
+                    "img_url": "media/q6/dark_couch.png",
+                    "outcome": "6"
+                } 
+            ]
+        }
+    ]}
