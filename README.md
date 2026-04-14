@@ -1,60 +1,94 @@
-# Anime Character Buzzfeed style quiz
+# Anime BuzzFeed Quiz
 
-Buzzfeed-inspired quiz to find out what popular anime character somebody is based on their responses to the various questions. Animes include: 
+A BuzzFeed-style personality quiz that matches the player to an anime character based on their answers.
 
-1. Dragon Ball  -> Goku
-2. JJK          -> Gojo
-3. One Piece    -> Luffy
-4. Demon Slayer -> Tanjiro
-5. Berserk      -> Guts
-6. Cowboy Bepop -> Spike
+The app is a small static frontend built with HTML, CSS, JavaScript, and jQuery. Quiz content and character results live in `data.json`, and the interface is rendered dynamically in the browser.
 
-[deployed url](https://lab2-quiz-platform-rodillasjavier.onrender.com/)
+Deployed with Vercel: [https://anime-buzzfeed-quiz.vercel.app/](https://anime-buzzfeed-quiz.vercel.app/)
 
-## What Worked Well
+## Characters
 
-Designing the page itself this time around went a lot more smoothly and quickly than with the lnading page. I already felt as though I was infinitely more comfortable with flex boxes and could pretty confidently know how to solve any layout issues I had. Also, sifting through the W3 documentation was very useful as I've never used JQuery before. 
+The current quiz can match players with:
 
-## What Didn't
+- Goku
+- Gojo
+- Luffy
+- Tanjiro
+- Guts
+- Spike
 
-I had a really hard time making the generalized framework. I think that on the landing page, my mistakes in my html were exposed when I started CSS. This time I learned from my structuring mistakes because styling was super easy, since I knew more how to structure my page. This time around, however, in a way that is analogous to what happened in lab1, once I tried generalizing the framework for quizzes, I quickly realized the flaws in the way I structure my HTML and frequently had to go back and add or take away identifiers and classes. 
+## Project Structure
 
-## Extra Credit
+- `index.html`: page shell, quiz container, and results modal
+- `style.css`: layout, answer states, and modal styling
+- `main.js`: loads quiz data, renders questions, handles selections, and calculates results
+- `data.json`: quiz title, header image, questions, answers, and character metadata
+- `media/`: character art, question assets, and header imagery
 
-None applied
+## How It Works
 
-## Screenshots
+1. `main.js` loads `data.json` with `$.getJSON(...)`.
+2. The header and all quiz questions are generated from the JSON data.
+3. Each answer maps to a character outcome ID.
+4. When the user clicks `Done!`, the app counts the selected outcome IDs.
+5. The character with the highest count is shown in the results modal.
 
-![alt text](lab2_ss1.png)
-![alt text](lab2_ss2.png) 
-![alt text](lab2_ss3.png) 
-![alt text](lab2_ss4.png) 
-![alt text](lab2_ss5.png) 
-![alt text](lab2_ss6.png)
+## Running Locally
 
-## Design Spec (From Assignment Page)
+Because the app loads `data.json` over HTTP, it should be served from a local web server instead of opened directly with `file://`.
 
-*Note:* ~~strikethrough~~ indicates completion.
+Example options:
 
-* **~~Questions:~~**
-    * Display Several (3 or more) questions
-    * Header image & some text
-    * Have multiple potential answers
+```bash
+python3 -m http.server 8000
+```
 
-* **~~Question Answers:~~**
-    * Be either (1) text or (2) image or (3) both
-        * Text answers are clickable text boxes (not images or buttons)
-        
-    * 4 Potential display states
-        * initial none selected
-        * `:hover`
-        * clicked/selected
-        * not selected (different from non selected state)
+Then open `http://localhost:8000` in your browser.
 
-* **~~Done Button:~~**
-    * Calculate quiz output/results
+If you prefer Node:
 
-* **~~Output Display:~~**
-    * Text & image
-    * Don't show unless calculations are finished
-    * Display error if no all questions are answered
+```bash
+npx serve .
+```
+
+## Customizing the Quiz
+
+Most content changes only require editing `data.json`.
+
+### Add or update characters
+
+Each character entry includes:
+
+- `name`
+- `image`
+- `description`
+
+### Add or update questions
+
+Each question includes:
+
+- `question_name`
+- `question_prompt`
+- `question_type`
+- `answers`
+
+Supported `question_type` values:
+
+- `text`
+- `image`
+- `image_text`
+
+Each answer includes:
+
+- `id`
+- `text`
+- `img_url`
+- `outcome`
+
+The `outcome` value should match a key in the `characters` object.
+
+## Notes
+
+- The quiz currently uses jQuery from the public CDN in `index.html`.
+- Result calculation is simple highest-count matching.
+- If the user clicks `Done!` before answering every question, the modal shows a validation message.
